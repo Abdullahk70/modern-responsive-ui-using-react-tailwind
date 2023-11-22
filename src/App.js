@@ -18,10 +18,10 @@ function App() {
     <div className="bg-black w-full text-white overflow-hidden">
       <div className={`${styles.paddingX} ${styles.flexCenter}`}>
         <div className={`${styles.boxWidth}`}>
-             <NavBar/>
+        <NavBar/>
         </div>
       </div>
-
+      
 
       <div className={`bg-black ${styles.flexStart}`}>
         <div className={`${styles.boxWidth} `}>
