@@ -4,6 +4,8 @@ import {logo,close,menu} from "../assets/assets"
 import {navLinks} from "../constants"
 
 const Navbar = () => {
+
+  const [toggle,setToggle]=useState(false);
   return (
     <nav className="w-120 flex justify-between items-center py-6 navbar">
 <img src={logo} alt="Hoobank" className="w-[124px] h-[32px]"/>
@@ -22,8 +24,8 @@ className={`font-poppins font-normal cursor-pointer text-[16px] ${index===navLin
   
 </ul>
 
-<div>
-  
+<div className="sm:hidden flex flex-1 justify-end items-center">
+<img src={toggle?close:menu} alt="menu" />
 </div>
     </nav>
   )
