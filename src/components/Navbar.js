@@ -25,7 +25,7 @@ className={`font-poppins font-normal cursor-pointer text-[16px] ${index===navLin
 </ul>
 
 <div className="sm:hidden flex flex-1 justify-end items-center">
-<img src={toggle?close:menu} alt="menu" />
+<img src={toggle?close:menu} onClick={()=>setToggle((prev)=>!prev)} alt="menu" className='w-[28px] h-[28px] object-contain cursor-pointer'/>
 </div>
     </nav>
   )
