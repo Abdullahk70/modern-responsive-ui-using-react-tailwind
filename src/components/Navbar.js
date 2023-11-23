@@ -27,6 +27,22 @@ className={`font-poppins font-normal cursor-pointer text-[16px] ${index===navLin
 <div className="sm:hidden flex flex-1 justify-end items-center">
 <img src={toggle?close:menu} onClick={()=>setToggle((prev)=>!prev)} alt="menu" className='w-[28px] h-[28px] object-contain cursor-pointer'/>
 </div>
+<div className={`${toggle?"flex":"hidden"} sm:hidden p-6 bg-slate-800  absolute top-20 right-0 mx-4 my-2 min-w-[140px] rounded xl sidebar`}>
+<ul className="list-none sm:hidden flex flex-col justify-end items-center flex-1 ">
+  {
+    navLinks.map((itm,index)=>(
+<li key={itm.id}
+className={`font-poppins font-normal cursor-pointer text-[16px] ${index===navLinks.length-1?'mr-0':'mb-4'}`}
+>
+  <a href={`#${itm.id}`}>
+    {itm.title}
+  </a>
+</li>
+    ))
+  }
+  
+</ul>
+</div>
     </nav>
   )
 }
